@@ -14,7 +14,7 @@ const content = [
   {
     id: 3,
     title: "Security above everything",
-    body: "It takes no time at all to request an investigation if something is getting wrong. Right whenever you feel like something is getting worse, or you are being scammed - Do not hesitate to contact our support 24/7.",
+    body: "It takes no time at all to request an investigation if something is getting wrong. Right whenever you feel like something is getting out of control, or you are being scammed - Do not hesitate to contact our support 24/7.",
     image: "undraw_secure_login_pdn4.svg",
   },
 ];
