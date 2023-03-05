@@ -11,7 +11,7 @@ const theme = {
   colors: {
     header: "#ebfbff",
     body: "#fff",
-    footer: "#2D2A2E",
+    footer: "#403E41",
   },
   mobile: "798px",
 };
