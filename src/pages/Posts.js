@@ -1,11 +1,14 @@
 import React from "react";
+import axios from "axios";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../components/styles/Global";
 import { PostsContainer } from "../components/styles/PostsContainer.styled";
-import LinkButton from "../components/LinkButton";
+// import LinkButton from "../components/LinkButton";
 import { useState, useEffect } from "react";
-import { getAllPosts } from "../utils/api";
 import { PostCard } from "../components/Post";
+import PostsHeader from "../components/PostsHeader";
+import Footer from "../components/Footer";
+import { Spinner } from "../components/styles/Spinner.Styled";
 
 const theme = {
   colors: {
@@ -18,24 +21,41 @@ const theme = {
 
 const PostPage = () => {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getAllPosts(setPosts);
-  }, [posts]);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://6400dc59ab6b7399d09ce778.mockapi.io/posts");
+        if (!response.statusText === "OK") {
+          throw new Error("Could not get posts.");
+        }
+        setPosts(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <h1>Posts</h1>
-        <LinkButton to="/" bg="#FF027A">
-          Home
-        </LinkButton>
-        <PostsContainer>
-          {posts.map((post) => (
-            <PostCard key={post.id} id={post.id} item={post.item} avatar={post.avatar} price={post.price} image={post.image} city={post.city} country={post.country} />
-          ))}
-        </PostsContainer>
+        <PostsHeader />
+        {loading ? (
+          <Spinner>Loading...</Spinner>
+        ) : (
+          <PostsContainer>
+            {posts.map((post) => (
+              <PostCard key={post.id} id={post.id} item={post.item} avatar={post.avatar} price={post.price} image={post.image} city={post.city} country={post.country} />
+            ))}
+          </PostsContainer>
+        )}
+
+        <Footer />
       </>
     </ThemeProvider>
   );

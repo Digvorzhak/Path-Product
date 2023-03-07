@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import LinkButton from "../LinkButton";
 
 export const PostStyle = styled.div`
   flex: 1 0 300px;
@@ -11,7 +10,7 @@ export const PostStyle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 4px;
+  margin: 10px;
 
   h3 {
     overflow: hidden;
