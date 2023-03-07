@@ -45,31 +45,31 @@ const AddForm = () => {
   return (
     <StyledFormWrapper>
       <StyledForm onSubmit={handleSubmit}>
-        <div>
+        <div className="input-wrapper">
           <label>Name:</label>
           <StyledInput name="name" type="text" value={values.name || ""} onChange={changeHandler} />
         </div>
-        <div>
+        <div className="input-wrapper">
           <label>Country:</label>
           <StyledInput name="country" type="text" value={values.country || ""} onChange={changeHandler} />
         </div>
-        <div>
+        <div className="input-wrapper">
           <label>City:</label>
           <StyledInput name="city" type="text" value={values.city || ""} onChange={changeHandler} />
         </div>
-        <div>
+        <div className="input-wrapper">
           <label>Item:</label>
           <StyledInput name="item" type="text" value={values.item || ""} onChange={changeHandler} />
         </div>
-        <div>
+        <div className="input-wrapper">
           <label>Item image:</label>
           <StyledInput name="image" type="text" value={values.image || ""} onChange={changeHandler} />
         </div>
-        <div>
+        <div className="input-wrapper">
           <label>Email:</label>
           <StyledInput name="email" type="text" value={values.email || ""} onChange={changeHandler} />
         </div>
-        <div>
+        <div className="input-wrapper">
           <label>Price:</label>
           <StyledInput name="price" type="number" value={values.price || ""} onChange={changeHandler} />
         </div>
