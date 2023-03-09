@@ -11,7 +11,9 @@ const Header = () => {
       <Container>
         <Nav>
           <Logo src="./images/logo.png" alt="" />
-          <LinkButton to="/posts">Try it Free</LinkButton>
+          <LinkButton to="/posts" hoverbg="#FF027A" hovercolor="#fff" opa="1" transform="1">
+            Try it Free
+          </LinkButton>
         </Nav>
         <Flex>
           <div>

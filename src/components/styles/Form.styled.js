@@ -10,6 +10,9 @@ export const StyledForm = styled.form`
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 
   .input-wrapper {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
   }
 `;

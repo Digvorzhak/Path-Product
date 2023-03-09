@@ -39,7 +39,6 @@ const AddForm = () => {
     const name = e.target.name;
     const value = e.target.value;
     setValues({ ...values, [name]: value });
-    console.log(values);
   }
 
   return (
@@ -73,8 +72,12 @@ const AddForm = () => {
           <label>Price:</label>
           <StyledInput name="price" type="number" value={values.price || ""} onChange={changeHandler} />
         </div>
-        <Button type="submit">Add</Button>
-        <LinkButton to="/posts">Back</LinkButton>
+        <Button type="submit" margintop="30px" marginleft="120px">
+          Add
+        </Button>
+        <LinkButton to="/posts" margintop="30px" marginleft="120px">
+          Back
+        </LinkButton>
       </StyledForm>
     </StyledFormWrapper>
   );

@@ -5,6 +5,7 @@ export const PostStyle = styled.div`
   height: 100%;
   background-color: #fff;
   /* border: 2px solid #403e41; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -31,10 +32,5 @@ export const PostStyle = styled.div`
 
   p {
     margin-bottom: 0;
-  }
-
-  button {
-    margin-top: auto;
-    margin-bottom: 5px;
   }
 `;

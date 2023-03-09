@@ -11,7 +11,7 @@ export const PostCard = ({ item, price, name, avatar, country, city, email, imag
         {city}, {country}
       </p>
       <p>{price}$</p>
-      <LinkButton to={`/edit-product/${id}`} padding="15px 25px">
+      <LinkButton to={`/edit-product/${id}`} padding="15px 25px" marginbottom="20px">
         Details
       </LinkButton>
     </PostStyle>
