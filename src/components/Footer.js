@@ -3,15 +3,22 @@ import { Container } from "./styles/Container.styled";
 import { Flex } from "./styles/Flex.styled";
 import React from "react";
 import { StyledFooter } from "./styles/Footer.styled";
+import { LoremIpsum } from "lorem-ipsum";
 
 const Footer = () => {
+  const lorem = new LoremIpsum({
+    count: 10,
+    units: "words",
+    format: "plain",
+  });
+
   return (
     <StyledFooter>
       <Container>
         <img src="/images/logowhite.png" alt="" />
         <Flex>
           <ul>
-            <li>Lorem10</li>
+            <li>ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod</li>
             <li>+1-543-123-4567</li>
             <li>example@pathproduct.com</li>
           </ul>

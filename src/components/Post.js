@@ -10,9 +10,9 @@ export const PostCard = ({ item, price, name, avatar, country, city, email, imag
       <p>
         {city}, {country}
       </p>
-      <p>{price}$</p>
+      <p className="with-margin">${price}</p>
       <LinkButton to={`/edit-product/${id}`} padding="15px 25px" marginbottom="20px">
-        Details
+        Edit
       </LinkButton>
     </PostStyle>
   );

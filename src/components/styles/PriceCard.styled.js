@@ -1,20 +1,19 @@
-// color1 = #00dbde
-// color2 = #fc00ff
 import React from "react";
 import styled, { css } from "styled-components";
 
-const gradient = (degs) => css`
-  background: linear-gradient(${degs || 130}deg, #00dbde 0%, #fc00ff 100%);
+const gradient = (degs, colorOne, colorTwo) => css`
+  background: linear-gradient(${degs || 130}deg, ${colorOne || "#00dbde 0%"}, ${colorTwo || "#fc00ff 100%"});
 `;
 
 export const Card = styled.div`
   position: relative;
   overflow: hidden;
   width: 300px;
-  padding: 3rem 0 2rem;
+  padding: 3rem 2rem;
   border-radius: 0.5rem;
+  margin: 20px;
   color: white;
-  ${gradient()};
+  ${(props) => gradient(props.degs, props.colorOne, props.colorTwo)};
   box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.025), 0 9px 46px 8px rgba(0, 0, 0, 0.25), 0 11px 15px -7px rgba(0, 0, 0, 0.25);
 
   &::after {
@@ -26,7 +25,7 @@ export const Card = styled.div`
     width: 100%;
     height: 100%;
     opacity: 0;
-    ${gradient(-50)};
+    ${(props) => gradient(-50, props.colorOne, props.colorTwo)};
     transition: opacity 0.75s;
   }
   &:hover::after {
@@ -41,14 +40,20 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 400px;
 `;
 
 export const PlanTitle = styled.div`
-  font-size: 1.25rem;
+  font-size: 1.75rem;
+  margin-bottom: 10px;
 `;
 
 export const PlanCost = styled.div`
   font-size: 3rem;
+  .currency-sign {
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
 `;
 
 export const FeatureListItem = styled.div`

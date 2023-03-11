@@ -23,4 +23,10 @@ export const Button = styled.button`
     background-color: ${({ hoverbg }) => hoverbg || "#FF027A"};
     color: ${({ hovercolor }) => hovercolor || "#fff"};
   }
+
+  &.with-margin {
+    @media screen and (max-width: 529px) {
+      margin-bottom: 10px;
+    }
+  }
 `;

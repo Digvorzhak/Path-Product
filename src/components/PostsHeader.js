@@ -10,9 +10,10 @@ const PostsHeader = () => {
       <Link to="/">
         <img src="./images/logo.png"></img>
       </Link>
-      <p>Here you can find available offers worldwide. Please note that users who are subscribed to us gets up to 65% more offers and can accept up to 3 offers at the same time.</p>
+      <p>Here you can find available offers worldwide. Users who are subscribed to us gets up to 60% more offers and can confirm or offer an unlimited amount of offers. Please note that our platform is currently under development and some features may not be available yet.</p>
+      {/* <p>Please note that our platform is currently under development and some features may not be available yet.</p> */}
       {/* <FlexColumn> */}
-      <LinkButton to="/subscriptions" bg="#FF027A" hoverbg="#EA315B" color="#fff">
+      <LinkButton className="with-margin" to="/subscriptions" bg="#FF027A" hoverbg="#EA315B" color="#fff">
         For plan details
       </LinkButton>
       <LinkButton to="/uploadpost">Upload a new post for free</LinkButton>

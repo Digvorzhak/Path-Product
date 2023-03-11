@@ -27,7 +27,8 @@ export const PostStyle = styled.div`
     height: 250px;
     object-fit: cover;
   }
-  p {
-    margin-bottom: 0;
+
+  .with-margin {
+    margin-bottom: 15px;
   }
 `;

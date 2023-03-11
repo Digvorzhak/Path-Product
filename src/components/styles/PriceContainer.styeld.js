@@ -5,5 +5,5 @@ export const PriceContainer = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  padding: 0 20px;
+  padding: 10px 20px;
 `;
