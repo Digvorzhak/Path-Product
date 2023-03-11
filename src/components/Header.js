@@ -11,15 +11,13 @@ const Header = () => {
       <Container>
         <Nav>
           <Logo src="./images/logo.png" alt="" />
-          <LinkButton to="/posts" hoverbg="#FF027A" hovercolor="#fff" opa="1" transform="1">
-            Try it Free
-          </LinkButton>
+          <LinkButton to="/posts">Try it Free</LinkButton>
         </Nav>
         <Flex>
           <div>
             <h1>Ask for every possible item around the world</h1>
             <p>PathProduct connects you to travelers around the world. Ask for a specific item for a small fee or bring a desired one for someone in need.</p>
-            <LinkButton to="/posts" bg="#FF027A" color="#fff">
+            <LinkButton to="/posts" bg="#FF027A" hoverbg="#EA315B" color="#fff">
               Get Started For Free
             </LinkButton>
           </div>

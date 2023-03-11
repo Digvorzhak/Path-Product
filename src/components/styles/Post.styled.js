@@ -12,24 +12,21 @@ export const PostStyle = styled.div`
   justify-content: center;
   align-items: center;
   margin: 10px;
-
   h3 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: break-word;
-    /* margin-top: 0; */
+    padding: 0px 40px;
     @media (max-width: ${({ theme }) => theme.mobile}) {
       white-space: normal;
     }
   }
-
   img {
     width: 250px;
     height: 250px;
     object-fit: cover;
   }
-
   p {
     margin-bottom: 0;
   }

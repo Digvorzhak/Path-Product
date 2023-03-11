@@ -2,7 +2,7 @@ import React from "react";
 import AddForm from "../components/AddForm";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../components/styles/Global";
-
+import Footer from "../components/Footer";
 const theme = {
   colors: {
     header: "#ebfbff",
@@ -16,7 +16,8 @@ const UploadPost = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <AddForm></AddForm>
+      <AddForm />
+      <Footer />
     </ThemeProvider>
   );
 };

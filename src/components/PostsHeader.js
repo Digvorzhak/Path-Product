@@ -12,7 +12,7 @@ const PostsHeader = () => {
       </Link>
       <p>Here you can find available offers worldwide. Please note that users who are subscribed to us gets up to 65% more offers and can accept up to 3 offers at the same time.</p>
       {/* <FlexColumn> */}
-      <LinkButton bg="#FF027A" color="#fff">
+      <LinkButton to="/subscriptions" bg="#FF027A" hoverbg="#EA315B" color="#fff">
         For plan details
       </LinkButton>
       <LinkButton to="/uploadpost">Upload a new post for free</LinkButton>
