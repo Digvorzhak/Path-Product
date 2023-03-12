@@ -18,7 +18,7 @@ const Footer = () => {
         <img src="/images/logowhite.png" alt="" />
         <Flex>
           <ul>
-            <li>ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod</li>
+            <li>ipsum dolor sit amet</li>
             <li>+1-543-123-4567</li>
             <li>example@pathproduct.com</li>
           </ul>

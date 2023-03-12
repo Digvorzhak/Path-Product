@@ -8,13 +8,19 @@ const gradient = (degs, colorOne, colorTwo) => css`
 export const Card = styled.div`
   position: relative;
   overflow: hidden;
-  width: 300px;
+  /* width: 300px; */
   padding: 3rem 2rem;
   border-radius: 0.5rem;
   margin: 20px;
   color: white;
   ${(props) => gradient(props.degs, props.colorOne, props.colorTwo)};
   box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.025), 0 9px 46px 8px rgba(0, 0, 0, 0.25), 0 11px 15px -7px rgba(0, 0, 0, 0.25);
+  flex: 1 0 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &::after {
     content: "";
@@ -30,6 +36,13 @@ export const Card = styled.div`
   }
   &:hover::after {
     opacity: 1;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    /* Adjust styles for smaller screens */
+    padding: 2rem 1rem;
+    margin: 10px;
+    flex-basis: calc(50% - 20px);
   }
 `;
 
