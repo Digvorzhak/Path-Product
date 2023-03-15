@@ -8,8 +8,8 @@ import { useState, useEffect } from "react";
 import { PostCard } from "../components/Post";
 import PostsHeader from "../components/PostsHeader";
 import Footer from "../components/Footer";
-import { Spinner } from "../components/styles/Spinner.Styled";
-
+import Spinner from "../components/styles/Spinner.Styled";
+import { Center } from "../components/styles/Center.styled";
 const theme = {
   colors: {
     header: "#ebfbff",
@@ -46,7 +46,9 @@ const PostPage = () => {
         <GlobalStyles />
         <PostsHeader />
         {loading ? (
-          <Spinner>Loading...</Spinner>
+          <Center>
+            <Spinner></Spinner>
+          </Center>
         ) : (
           <PostsContainer>
             {posts.map((post) => (

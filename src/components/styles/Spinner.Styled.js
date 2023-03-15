@@ -1,19 +1,51 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-export const Spinner = styled.div`
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+export const SpinnerAnimation = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 `;
+
+export const SpinnerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 20px;
+
+  & > div {
+    display: inline-block;
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff027a;
+    animation: ${SpinnerAnimation} 0.8s ease-in-out infinite;
+  }
+
+  & > div:nth-child(2) {
+    animation-delay: -0.4s;
+  }
+
+  & > div:nth-child(3) {
+    animation-delay: -0.2s;
+  }
+`;
+
+function Spinner() {
+  return (
+    <SpinnerWrapper>
+      <div></div>
+      <div></div>
+      <div></div>
+    </SpinnerWrapper>
+  );
+}
+
+export default Spinner;
