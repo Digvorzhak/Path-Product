@@ -5,11 +5,11 @@ PathProduct is a new platform that connects travelers and buyers from around the
 For now, there is only an admin demo that monitors the posts. You can upload a new post, edit an existing post, or delete a post. I am currently working on implementing more features and functionalities to make the platform even better.
 
 ## Technologies:
-1. React.js
-2. mockAPI
-3. Styled Components
-4. Axios
-5. React Router Dom
+* React.js
+* mockAPI
+* Styled Components
+* Axios
+* React Router Dom
 
 
 Link - https://pathproduct.netlify.app/
